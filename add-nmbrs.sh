@@ -1,9 +1,14 @@
-#!bin/bash
- NUMBER1=$1
- NUMBER2=$2
- SUM=$(($NUMBER1 + $NUMBER2))
- echo "total:: $SUM"
- echo "how many args passed::$#"
- echo "all args passed::$@"
- echo " script name:: $0"
- 
+
+#!/bin/bash
+# Calculate the sum of two integers with pre initialize values
+# in a shell script
+
+# Initialize two variables with number
+a=10
+b=20
+
+# Calculate sum
+sum=$(( $a + $b ))
+
+# Display the result
+echo "Sum is: $sum"
