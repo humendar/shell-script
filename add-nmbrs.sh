@@ -4,11 +4,11 @@
 # in a shell script
 
 # Initialize two variables with number
-a=$10
-b=$20
+A=$a
+B=$b
 
 # Calculate sum
-sum=$(( $a + $b ))
+sum=$(( $A + $B ))
 
 # Display the result
 echo "Sum is: $sum"
