@@ -4,8 +4,8 @@
 # in a shell script
 
 # Initialize two variables with number
-a=10
-b=20
+a=$10
+b=$20
 
 # Calculate sum
 sum=$(( $a + $b ))
