@@ -1,20 +1,21 @@
-
 #!/bin/bash
-file=/etc/passwd
+
+SOURCE_DIR="/tmp/shellscript-logs"
 
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-if [ ! -f $file ] # ! denotes opposite
+if [ ! -d $SOURCE_DIR ] # ! denotes opposite
 then
-    echo -e "$R Source directory: $file does not exists. $N"
+    echo -e "$R Source directory: $SOURCE_DIR does not exists. $N"
 fi
 
-while IFS=":" read -r username password user_id group_id user_fullname home_dir shell_path
+FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +14 -name "*.log")
+
+while IFS= read -r line
 do
-    echo "username: $username"
-    echo "user ID: $user_id"
-    echo "User Full name: $user_fullname"
-done < $file
+    echo "Deleting file: $line"
+    rm -rf $line
+done <<< $FILES_TO_DELETE
