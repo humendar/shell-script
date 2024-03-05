@@ -1,14 +1,20 @@
+
 #!/bin/bash
-  SOURCE_DIR="/temp/delet-old-log"
-  R="\e[31m"
-  G="\e[32"
-  N="\e[0m"
-if [ ! -d $SOURCE_DIR ] # ! denotes opposit
-  then
-  echo -e "$R source diretory: $SOURCE_DIR does not exist $N"
-  fi
-  FILES_TO_DELET=$(find $SOURCE_DIR -type f -mtime +14 -name "*.log")
-  while IFS=read -r line
-  echo "deleting file : $line"
-  done <<< $FILES_TO_DELETE 
-    
+file=/etc/passwd
+
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
+if [ ! -f $file ] # ! denotes opposite
+then
+    echo -e "$R Source directory: $file does not exists. $N"
+fi
+
+while IFS=":" read -r username password user_id group_id user_fullname home_dir shell_path
+do
+    echo "username: $username"
+    echo "user ID: $user_id"
+    echo "User Full name: $user_fullname"
+done < $file
