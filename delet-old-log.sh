@@ -5,7 +5,7 @@
   N="\e[0m"
 if [ ! -d $SOURCE_DIR ] # ! denotes opposit
   then
-  echo -e "$R source diretory: $SOURCE-DIR does not exist $N"
+  echo -e "$R source diretory: $SOURCE_DIR does not exist $N"
   fi
   FILES_TO_DELET=$(find $SOURCE_DIR -type f -mtime +14 -name "*.log")
   while IFS=read -r line
