@@ -10,3 +10,4 @@ if [$? -ne 0]; then
 exit1
 else
   echo "installing git is success"
+  fi
