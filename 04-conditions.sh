@@ -1,5 +1,5 @@
 #!/bin/bash
-ls -ltr
+head
 if [$? -ne 0]; then 
 echo "previos command is failure"
 exit1
