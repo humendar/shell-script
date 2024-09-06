@@ -1,13 +1,21 @@
 #!/bin/bash
-  USERID=$(id -u)
-if [$USERID: -ne 0]; then
-  echo "you need to be root user to execute this script"
-exit1 
-fi
-  yum install git -y
-if [$?: -ne 0]; then
-  echo "installing git is failure"
-exit1
+
+ID=$(id -u)
+
+if [ $ID -ne 0 ]
+then
+    echo "ERROR:: Please run this script with root access"
+    exit 1 # you can give other than 0
 else
-  echo "installing git is success"
-  fi
+    echo "You are root user"
+fi # fi means reverse of if, indicating condition end
+
+yum install git -y
+
+if [ $? -ne 0 ]
+then
+    echo "ERROR:: Installing git is failed"
+    exit 1
+else
+    echo "Installing git is SUCCESS"
+fi
