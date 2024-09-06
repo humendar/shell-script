@@ -1,4 +1,4 @@
 #!/bin/bash
-filename=$1
 DATE=$(date)
+$(date)=$1
 echo "execute date of file $DATE"
