@@ -1,6 +1,6 @@
-echo -n "username"
+echo  "username"
 read -s USERNAME
-echo -n "password"
+echo "password"
 read -s "PASSWORD"
 echo "username: $USERNAME"
 echo "password: $PASSWORD"
