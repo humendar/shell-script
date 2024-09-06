@@ -1,3 +1,3 @@
 #!/bin/bash
-DATE=$(time)
-echo "execute time of file $DATE"
+DATE=$(date)
+echo "execute date of file $DATE"
