@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Enter password"
-read pass
+read -s pass
 if [ $pass="aadhya123" ]
 then
   echo "The password is correct."
