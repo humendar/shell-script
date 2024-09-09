@@ -12,3 +12,4 @@ fi
 if [ $ID -ne 0 ]
 then eho "ERROR:: please run this script with root access"
 exit 1
+fi
