@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Enter password"
 read pass
-if [ $pass="password" ]
+if [ $pass="chary123" ]
 then
   echo "The password is correct."
 else
